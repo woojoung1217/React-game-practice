@@ -4,14 +4,15 @@ import GuGuDan from "./GamesComponents/gugudan";
 import GugudanGame from "./GamesComponents/gugudancopy";
 import WordPlay from "./GamesComponents/wordplay";
 import { useState, useEffect } from "react";
+import Numbaseball from "./GamesComponents/NumberBaseball";
 
 function App() {
   return (
     <div className="App">
       {/* <GugudanGame /> */}
-      <WordPlay></WordPlay>
-      <Clock></Clock>
-      <GugudanGame></GugudanGame>
+      {/* <WordPlay></WordPlay>
+      <Clock></Clock> */}
+      <Numbaseball></Numbaseball>
     </div>
   );
 
