@@ -16,21 +16,21 @@ function App() {
     </div>
   );
 
-  function Clock() {
-    const [date, setDate] = useState(new Date());
+  // function Clock() {
+  //   const [date, setDate] = useState(new Date());
 
-    useEffect(() => {
-      const timer = setInterval(() => setDate(new Date()), 1000);
-      return () => clearInterval(timer);
-    }, []);
+  //   useEffect(() => {
+  //     const timer = setInterval(() => setDate(new Date()), 1000);
+  //     return () => clearInterval(timer);
+  //   }, []);
 
-    return (
-      <div>
-        <p>현재 시간: {date.toLocaleTimeString()}</p>
-        <p>현재 날짜: {date.toLocaleDateString()}</p>
-      </div>
-    );
-  }
+  //   return (
+  //     <div>
+  //       <p>현재 시간: {date.toLocaleTimeString()}</p>
+  //       <p>현재 날짜: {date.toLocaleDateString()}</p>
+  //     </div>
+  //   );
+  // }
 }
 
 export default App;
