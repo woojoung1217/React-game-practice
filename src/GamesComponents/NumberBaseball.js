@@ -4,10 +4,9 @@ import Try from "./Try";
 
 const getNumbers = () => {
   const candidates = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  // 1 에서 9 까지를 가지고 있는 배열을 생성한다.
   const array = [];
-  // 빈 배열을 만들어 초기화 한다.
   for (let i = 0; i < 4; i += 1) {
+    //0,1,2,3
     const chosen = candidates.splice(Math.floor(Math.random() * (9 - i)), 1)[0];
     array.push(chosen);
   }
@@ -16,6 +15,7 @@ const getNumbers = () => {
 
 const NumberBaseball = () => {
   const [answer, setAnswer] = useState(getNumbers());
+
   const [value, setValue] = useState("");
   const [result, setResult] = useState("");
   const [tries, setTries] = useState([]);
@@ -38,6 +38,7 @@ const NumberBaseball = () => {
         setAnswer(getNumbers());
         setTries([]);
         inputEl.current.focus();
+        //정답일 경우
       } else {
         const answerArray = value.split("").map((v) => parseInt(v));
         let strike = 0;
@@ -49,6 +50,7 @@ const NumberBaseball = () => {
           setAnswer(getNumbers());
           setTries([]);
           inputEl.current.focus();
+          // 10번 이상 실패한 경우
         } else {
           console.log("답은", answer.join(""));
           for (let i = 0; i < 4; i += 1) {
@@ -73,7 +75,7 @@ const NumberBaseball = () => {
           ]);
           setValue("");
           inputEl.current.focus();
-        }
+        } //
       }
     },
     [value, answer]

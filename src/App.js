@@ -5,7 +5,8 @@ import GugudanGame from "./GamesComponents/gugudancopy";
 import WordPlay from "./GamesComponents/wordplay";
 import { useState, useEffect } from "react";
 import Numbaseball from "./GamesComponents/NumberBaseball";
-
+import { type } from "@testing-library/user-event/dist/type";
+import ResponseCheck from "./GamesComponents/responsegame";
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,7 @@ function App() {
       {/* <WordPlay></WordPlay>
       <Clock></Clock> */}
       <Numbaseball></Numbaseball>
+      {/* <ResponseCheck></ResponseCheck> */}
     </div>
   );
 
