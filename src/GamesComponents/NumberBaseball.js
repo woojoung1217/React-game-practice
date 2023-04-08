@@ -6,8 +6,7 @@ const getNumbers = () => {
   const candidates = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   const array = [];
   for (let i = 0; i < 4; i += 1) {
-    //0,1,2,3
-    const chosen = candidates.splice(Math.floor(Math.random() * (9 - i)), 1)[0];
+    const chosen = candidates.splice(Math.floor(Math.random() * 9 - i), 1)[0];
     array.push(chosen);
   }
   return array;
@@ -15,10 +14,13 @@ const getNumbers = () => {
 
 const NumberBaseball = () => {
   const [answer, setAnswer] = useState(getNumbers());
-
+  //
   const [value, setValue] = useState("");
+  //
   const [result, setResult] = useState("");
+  //
   const [tries, setTries] = useState([]);
+  //
   const inputEl = useRef(null);
 
   const onSubmitForm = useCallback(
@@ -32,6 +34,7 @@ const NumberBaseball = () => {
             result: "홈런!",
           },
         ]);
+
         setResult("홈런!");
         alert("게임을 다시 실행합니다.");
         setValue("");
