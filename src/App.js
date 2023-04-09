@@ -7,13 +7,15 @@ import { useState, useEffect } from "react";
 import Numbaseball from "./GamesComponents/NumberBaseball";
 import { type } from "@testing-library/user-event/dist/type";
 import ResponseCheck from "./GamesComponents/responsegame";
+import Numberbaseball2 from "./GamesComponents/baseballtest";
 function App() {
   return (
     <div className="App">
       {/* <GugudanGame /> */}
       {/* <WordPlay></WordPlay>
       <Clock></Clock> */}
-      <Numbaseball></Numbaseball>
+      {/* <Numbaseball></Numbaseball> */}
+      {<Numberbaseball2 />}
       {/* <ResponseCheck></ResponseCheck> */}
     </div>
   );
