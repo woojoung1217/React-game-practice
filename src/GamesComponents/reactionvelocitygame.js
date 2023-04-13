@@ -1,10 +1,10 @@
 /* eslint-disable */
 import { wait } from "@testing-library/user-event/dist/utils";
 import React, { useCallback, useRef, useState } from "react";
-
+import axios from "axios";
 const ResponseCheck = () => {
-  const [message, setmassage] = useState("클릭해서 시작하세요");
   const [state, setState] = useState("waiting");
+  const [message, setmassage] = useState("클릭해서 시작하세요");
   const [result, setResult] = useState([]);
   const timeout = useRef(null);
   const startTime = useRef(0);
