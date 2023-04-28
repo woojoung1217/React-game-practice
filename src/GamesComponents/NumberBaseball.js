@@ -51,7 +51,7 @@ const NumberBaseball = () => {
           alert("게임을 다시 시작합니다.");
           setValue("");
           setAnswer(getNumbers());
-          setTries([]);
+          setTrices([]);
           inputEl.current.focus();
           // 10번 이상 실패한 경우
         } else {
